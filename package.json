@@ -1,36 +1,35 @@
 {
-  "name": "webrtc",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "socket.io-client": "^2.3.0"
-  },
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "This is RESTful API for Task Manager.",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts run",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js",
+    "client": "node client/server.js --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meashishpokhrel/task-manager.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meashishpokhrel/task-manager/issues"
   },
-  "devDependencies": {
+  "homepage": "https://github.com/meashishpokhrel/task-manager#readme",
+  "dependencies": {
+    "admin-bro": "^2.8.0",
+    "admin-bro-expressjs": "^2.1.1",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.20",
+    "nodemon": "^2.0.4",
+    "validator": "^13.1.1"
   }
 }
