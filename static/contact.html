@@ -72,7 +72,7 @@
        
         
         
-        <div class="navigation">
+        <div class="navigation" style="height: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-md-10 col-sm-9 col-8">
@@ -84,41 +84,46 @@
                             </button>
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
+                                <ul class="navbar-nav mr-auto" style="margin-top: -25px;">
                                     <li class="nav-item">
-                                        <a  href="index-3.html">Home</a>
-                                      
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
+                                        <a  href="home-loggedin.html">Home</a>
                                        
                                     </li>
                                     <li class="nav-item">
+                                        <a href="aboutloggedin.html">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  href="courses.html">Courses</a>
+                                        
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="events.html">Events</a>
-                                     
+                                        
                                     </li>
                                     <li class="nav-item">
                                         <a href="teachers.html">Our teachers</a>
-                                        
+                                       
                                     </li>
-                                  
                                    
-                                    <li class="nav-item">
-                                        <a  class="active" href="contact.html">Contact</a>
-                                      
+                                    
+                                    <li class="nav-item mr-5">
+                                        <a class="active" href="contact.html">Contact</a>
+                                       
+                                    </li>
+                                    
+                                    <li class="nav-item ml-5">
+                                        <li class = ""><a href="#" id="search"><i class="fa fa-search"></i></a></li>
                                     </li>
                                 </ul>
                             </div>
                         </nav> <!-- nav -->
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-2 mt-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
                                 
+                                <a href="#" class="m3-3"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 40px; height: 37px; border-radius: 20px; margin-top: -30px;" src="/images/developers/d-4.jpg"></a>
+                               <button class="mr-3 btn-login btn-round"  style = "margin-top: -30px" href="#">Logout </button>
                             </ul>
                         </div> <!-- right icon -->
                     </div>
@@ -384,6 +389,7 @@
 
     <!--====== Bootstrap js ======-->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/f5610f7d47.js" crossorigin="anonymous"></script>
     
     <!--====== Slick js ======-->
     <script src="js/slick.min.js"></script>
