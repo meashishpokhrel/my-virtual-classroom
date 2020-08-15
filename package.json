@@ -1,36 +1,30 @@
 {
-  "name": "task-manager",
-  "version": "1.0.0",
-  "description": "This is RESTful API for Task Manager.",
-  "main": "index.js",
+  "name": "node-lms",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "start": "node src/index.js",
     "server": "nodemon src/index.js",
     "client": "node client/server.js --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meashishpokhrel/task-manager.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/meashishpokhrel/task-manager/issues"
-  },
-  "homepage": "https://github.com/meashishpokhrel/task-manager#readme",
   "dependencies": {
-    "admin-bro": "^2.8.0",
-    "admin-bro-expressjs": "^2.1.1",
-    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
-    "concurrently": "^5.3.0",
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.20",
-    "nodemon": "^2.0.4",
-    "validator": "^13.1.1"
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
+    "express": "~4.16.0",
+    "express-handlebars": "^3.0.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "http-errors": "~1.6.2",
+    "mongodb": "^3.1.9",
+    "mongoose": "^5.3.12",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0"
   }
 }
