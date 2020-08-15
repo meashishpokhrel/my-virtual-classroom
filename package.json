@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node src/index.js",
-    "server": "nodemon src/index.js",
+    "server": "nodemon app.js",
     "client": "node client/server.js --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -23,6 +23,7 @@
     "mongodb": "^3.1.9",
     "mongoose": "^5.3.12",
     "morgan": "~1.9.0",
+    "nodemon": "^2.0.4",
     "passport": "^0.4.0",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0"

@@ -52,8 +52,11 @@
                         <div class="right-icon text-right">
                             <ul>
                                 
-                                <a href="#" class="m3-3"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 40px; height: 37px; border-radius: 20px; margin-top: -30px;" src="/images/developers/d-4.jpg"></a>
-                               <button class="mr-3 btn-login btn-round"  style = "margin-top: -30px" href="#">Logout </button>
+                                <a href="#" class="m3-3"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 40px; height: 37px; border-radius: 20px; margin-top: -30px;" src="public/images/developers/d-4.jpg"></a>
+                               {{#if user}}
+                                <a class="mr-3 btn-login btn-round"  style = "margin-top: -30px" href="/users/logout">Logout</a>
+                            {{/if}}
+                               {{!-- <button type="submit" class="mr-3 btn-login btn-round"  style = "margin-top: -30px" href="users/logout">Logout </button> --}}
                             </ul>
                         </div> <!-- right icon -->
                     </div>

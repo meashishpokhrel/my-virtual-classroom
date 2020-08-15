@@ -34,9 +34,10 @@ router.post('/signup', function(req, res, next) {
   errors = req.validationErrors();
 
   if(errors) {
-    res.render('user/signup', {
-      errors: errors
-    });
+    res.redirect("/")
+    // console.log(errors[0].msg)
+    // req.flash('signup_msg', errors[0].msg);
+    
   } else {
     // Create a user
     var newUser = new User({
@@ -76,7 +77,7 @@ router.post('/signup', function(req, res, next) {
     }
     // Flash message
     req.flash('success_msg', 'User added');
-    res.render('user/signin');
+    res.redirect('/');
   }
 });
 
@@ -99,7 +100,7 @@ router.get('/signin', function(req, res, next) {
   res.render('user/signin', {title: 'Sign In'});
 });
 
-router.post('/signin', passport.authenticate('local', {failureRedirect: '/users/signin', failureFlash: true}), function(req, res, next) {
+router.post('/signin', passport.authenticate('local', {failureRedirect: '/', failureFlash: true}), function(req, res, next) {
   req.flash('success_msg', 'Logged in.');
   var usertype = req.user.type;
   res.redirect('/');

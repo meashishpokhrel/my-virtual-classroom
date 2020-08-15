@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 // Connect to the database
 // mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 // var db = mongoose.connection;
-mongoose.connect("mongodb://127.0.0.1:27017/testingclass",{
+mongoose.connect("mongodb://127.0.0.1:27017/my-virtual-classroom",{
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false

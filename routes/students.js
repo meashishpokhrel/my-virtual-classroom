@@ -37,7 +37,7 @@ function isLoggedIn(req, res, next) {
     return next();
   } else {
     req.flash('You must login to access this page.');
-    res.redirect('/users/signin');
+    res.redirect('index');
   }
 };
 module.exports = router;
