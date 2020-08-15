@@ -238,7 +238,7 @@ class App extends Component {
       this.getLocalStream()
 
       console.log(data.success)
-      const status = data.peerCount > 1 ? `Total Connected Peers to room ${window.location.pathname}: ${data.peerCount}` : 'Waiting for other peers to connect'
+      const status = data.peerCount > 1 ? `Total Participants ${window.location.pathname}: ${data.peerCount}` : 'Waiting for others !'
 
       this.setState({
         status: status,
@@ -249,7 +249,7 @@ class App extends Component {
     this.socket.on('joined-peers', data => {
 
       this.setState({
-        status: data.peerCount > 1 ? `Total Connected Peers to room ${window.location.pathname}: ${data.peerCount}` : 'Waiting for other peers to connect'
+        status: data.peerCount > 1 ? `Total Participants ${window.location.pathname}: ${data.peerCount}` : 'Waiting for others !'
       })
     })
 
@@ -266,7 +266,7 @@ class App extends Component {
           // remoteStream: remoteStreams.length > 0 && remoteStreams[0].stream || null,
           remoteStreams,
           ...selectedVideo,
-          status: data.peerCount > 1 ? `Total Connected Peers to room ${window.location.pathname}: ${data.peerCount}` : 'Waiting for other peers to connect'
+          status: data.peerCount > 1 ? `Total Participants ${window.location.pathname}: ${data.peerCount}` : 'Waiting for others !'
         }
         }
       )
