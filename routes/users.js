@@ -34,9 +34,9 @@ router.post('/signup', function(req, res, next) {
   errors = req.validationErrors();
 
   if(errors) {
-    res.redirect("/")
-    // console.log(errors[0].msg)
-    // req.flash('signup_msg', errors[0].msg);
+    
+    req.flash('success_msg', "Error to Sign Up. Duplicate Information. Please Try Again !");
+    res.redirect('/');
     
   } else {
     // Create a user
@@ -76,7 +76,7 @@ router.post('/signup', function(req, res, next) {
       });
     }
     // Flash message
-    req.flash('success_msg', 'User added');
+    req.flash('success_msg', 'Account Succesfully Created ! Please Log in !');
     res.redirect('/');
   }
 });
@@ -101,9 +101,15 @@ router.get('/signin', function(req, res, next) {
 });
 
 router.post('/signin', passport.authenticate('local', {failureRedirect: '/', failureFlash: true}), function(req, res, next) {
-  req.flash('success_msg', 'Logged in.');
+  // req.flash('success_msg', 'Logged in.');
   var usertype = req.user.type;
-  res.redirect('/');
+  if (usertype === "student"){
+    res.redirect('/');
+  }
+  else{
+    res.redirect("/teachers-detail")
+  }
+  
 });
 
 passport.use(new LocalStrategy(
@@ -133,7 +139,7 @@ passport.use(new LocalStrategy(
 // Logout
 router.get('/logout', function(req, res){
 	req.logout();
-	req.flash('success_msg', "Logged out");
+	// req.flash('success_msg', "Logged out");
   	res.redirect('/');
 });
 

@@ -51,5 +51,9 @@ router.get("/events-detail", function (req,res) {
 router.get("/contact", function (req,res) {
   res.render("logged-user-views/contact", {title: 'Contact Us'})
 })
+//-----------------------User Profile---------
 
+router.get("/profile", function (req,res) {
+  res.render("public-views/myprofile", {title: 'My Profile'})
+})
 module.exports = router;
