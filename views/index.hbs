@@ -145,6 +145,8 @@
                         </div> <!-- row -->
                     </div> <!-- category -->
                 </div>
+
+                {{#unless user}}
                 <div class="col-lg-5 offset-lg-1">
                     <div class="category-form">
                         <div class="form-title text-center">
@@ -152,6 +154,7 @@
                             <span>Sign up now </span>
                         </div>
                         <div class="main-form">
+
 
 
 {{!-- --------------------------- Sign Up Begins Here------------------------------ --}}
@@ -234,6 +237,7 @@
 
 
   {{!-- --------------------------- Sign Up Ends Here------------------------------ --}}
+  {{/unless}}
                         </div>
                     </div>
                 </div>
@@ -380,7 +384,7 @@
                     <div class="singel-course-2">
                         <div class="thum">
                             <div class="image">
-                                <img src="images/course/cu-5.jpg" alt="Course">
+                                <img src="public/images/course/cu-5.jpg" alt="Course">
                             </div>
                           
                             <div class="course-teacher">

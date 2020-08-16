@@ -13,7 +13,7 @@
     <title>{{title}}</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="shortcut icon" href="public/images/logo.png" type="image/png">
 
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="public/css/slick.css">
@@ -53,7 +53,7 @@
    
    <!--====== PRELOADER PART START ======-->
     
-    {{!-- <div class="preloader">
+    <div class="preloader">
         <div class="loader rubix-cube">
             <div class="layer layer-1"></div>
             <div class="layer layer-2"></div>
@@ -64,7 +64,7 @@
             <div class="layer layer-7"></div>
             <div class="layer layer-8"></div>
         </div>
-    </div> --}}
+    </div>
   
     {{!-- {{> header }}
     <!--Success Messages-->
@@ -120,6 +120,19 @@
         })
       });</script>
     
+      <script>
+        $(document).ready(function(){
+        $(window).load(function(){
+            var x = window.location.href;
+                $('ul a[href="'+x+'"]').each(function() {
+                    if(x == window.location.href){
+                        $('ul li').removeClass('active');
+                        $(this).parent('li').addClass('active');
+                    } 
+                });
+            });
+        });
+    </script>
     
     
     
