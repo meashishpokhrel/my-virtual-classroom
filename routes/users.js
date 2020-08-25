@@ -107,7 +107,7 @@ router.post('/signin', passport.authenticate('local', {failureRedirect: '/', fai
     res.redirect('/');
   }
   else{
-    res.redirect("/teachers-detail")
+    res.redirect("/teacher-panel")
   }
   
 });
