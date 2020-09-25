@@ -59,7 +59,34 @@ router.get("/profile", isLoggedIn,function (req,res) {
 
 //-------------------Teacher Panel----------------------
 router.get("/teacher-panel", isLoggedIn,function (req,res) {
-  res.render("instructors/teacher-panel", {title: 'My Profile'})
+  res.render("admin/teacher-panel", {title: 'Dashboard', layout: 'adminlayout'})
+})
+router.get("/work", isLoggedIn,function (req,res) {
+  res.render("admin/work", {title: 'All Works', layout: 'adminlayout'})
+})
+router.get("/attendance", isLoggedIn,function (req,res) {
+  res.render("admin/attendance", {title: 'Attendance', layout: 'adminlayout'})
+})
+router.get("/users", isLoggedIn,function (req,res) {
+  res.render("admin/users", {title: 'Students', layout: 'adminlayout'})
+})
+router.get("/work", isLoggedIn,function (req,res) {
+  res.render("admin/work", {title: 'All Tasks', layout: 'adminlayout'})
+})
+router.get("/assignment", isLoggedIn,function (req,res) {
+  res.render("admin/assignment", {title: 'Assignments', layout: 'adminlayout'})
+})
+router.get("/studentDetail", isLoggedIn,function (req,res) {
+  res.render("admin/studentDetail", {title: 'Student Details', layout: 'adminlayout'})
+})
+router.get("/seeprofile", isLoggedIn,function (req,res) {
+  res.render("admin/seeprofile", {title: 'Profile', layout: 'adminlayout'})
+})
+router.get("/settings", isLoggedIn,function (req,res) {
+  res.render("admin/settings", {title: 'Settings', layout: 'adminlayout'})
+})
+router.get("/details", isLoggedIn,function (req,res) {
+  res.render("admin/details", {title: 'Settings', layout: 'adminlayout'})
 })
 
 
